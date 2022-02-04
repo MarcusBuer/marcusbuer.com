@@ -7,10 +7,10 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@styled-icons/material": "^10.34.0",
     "@types/styled-components": "^5.1.12",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-switch": "^6.0.0",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {

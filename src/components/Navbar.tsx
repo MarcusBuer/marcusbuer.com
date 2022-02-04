@@ -1,9 +1,7 @@
 import React from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import S from 'react-switch';
+import Switch from './Switch';
 import Container from './Container';
-
-const Switch = S.default ? S.default : S;
 
 interface Props {
   toggleTheme: () => void;
@@ -26,11 +24,7 @@ function Navbar({ toggleTheme }: Props) {
           <Switch
             onChange={toggleTheme}
             checked={Theme.title === 'dark'}
-            checkedIcon={false}
-            uncheckedIcon={false}
-            height={10}
-            width={30}
-            handleDiameter={20}
+            size={30}
             onColor={Theme.colors.primary}
             offColor={Theme.colors.secondary}
           />
