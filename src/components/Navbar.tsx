@@ -1,7 +1,9 @@
 import React from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import Switch from 'react-switch';
+import S from 'react-switch';
 import Container from './Container';
+
+const Switch = S.default ? S.default : S;
 
 interface Props {
   toggleTheme: () => void;
