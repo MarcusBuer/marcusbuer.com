@@ -51,24 +51,4 @@ export const GlobalStyles = createGlobalStyle`
       color: ${props => props.theme.colors.quaternary};
     }
   }
-
-  .link {
-    position: relative;
-
-    :hover::after {
-      width: 100%;
-    }
-
-    ::after {
-      position: absolute;
-      content: '';
-      left: 0;
-      bottom: 0;
-      height: 2px;
-      border-radius: 1px;
-      width: 0px;
-      background-color: var(--blue);
-      transition: var(--transition);
-    }
-  }
 `;

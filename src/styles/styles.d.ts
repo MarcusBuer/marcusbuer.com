@@ -1,16 +1,8 @@
 import 'styled-components';
-declare module 'styled-components' {
-  export interface DefaultTheme {
-    title: string;
-    colors: {
-      primary: string;
-      secondary: string;
-      tertiary: string;
-      quaternary: string;
-      quinary: string;
+import theme from './themes/dark';
 
-      background: string;
-      text: string;
-    };
-  }
+type Theme = typeof theme;
+
+declare module 'styled-components' {
+  export interface DefaultTheme extends Theme {}
 }
