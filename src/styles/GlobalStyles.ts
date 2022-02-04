@@ -34,7 +34,8 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: var(--font-main);
-    color: var(--black);
+    background-color: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.text};
   }
 
   ul, li, ol {
@@ -43,11 +44,11 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: var(--black);
+    color: ${props => props.theme.colors.text};
     transition: var(--transition);
 
     :hover {
-      color: var(--blue)
+      color: ${props => props.theme.colors.quaternary};
     }
   }
 
