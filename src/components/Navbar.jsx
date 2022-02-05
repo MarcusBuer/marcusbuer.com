@@ -41,6 +41,7 @@ const StyledNavbar = styled.nav`
 
   * {
     transition: all 0.25s ease;
+    font-weight: bold;
   }
 
   #NavBar {

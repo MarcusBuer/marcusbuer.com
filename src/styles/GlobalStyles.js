@@ -18,20 +18,6 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
   }
 
-  // Scrollbar styles 
-  html {
-    scrollbar-width: thin;
-    scrollbar-color: var(--black);
-  }
-
-  body::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  body::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-  }
-
   body {
     font-family: var(--font-main);
     background-color: ${props => props.theme.colors.background};

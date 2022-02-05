@@ -9,6 +9,10 @@ import DarkTheme from '../styles/themes/dark'
 
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
+import About from '../components/About'
+import Portfolio from '../components/Portfolio'
+import Blog from '../components/Blog'
+import Contact from '../components/Contact'
 
 const Home = () => {
   const [theme, setTheme] = UsePersistentState('theme', DarkTheme)
@@ -22,16 +26,10 @@ const Home = () => {
       <GlobalStyles />
       <Navbar toggleTheme={toggleTheme} />
       <Hero />
-      {/* <section id='My work'>
-        <Container>
-          <h2>About me</h2>
-        </Container>
-      </section>
-      <section id='Contact'>
-        <Container>
-          <h2>About me</h2>
-        </Container>
-      </section> */}
+      <About/>
+      <Portfolio/>
+      <Blog />
+      <Contact/>
     </ThemeProvider>
   )
 }

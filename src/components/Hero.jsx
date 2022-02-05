@@ -14,9 +14,6 @@ function Hero() {
         bg={true}
       />
       <StyledHero id='hero'>
-        <Container></Container>
-      </StyledHero>
-      <StyledHero id='teste'>
         <Container>
           <h2>Hero</h2>
         </Container>
