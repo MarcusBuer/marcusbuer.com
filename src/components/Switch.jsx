@@ -1,16 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { LightMode, Nightlight } from '@styled-icons/material';
+import React from 'react'
+import styled from 'styled-components'
+import { LightMode, Nightlight } from '@styled-icons/material'
 
-interface Props {
-  onChange: () => void;
-  checked: boolean;
-  size: number;
-  onColor: string;
-  offColor: string;
-}
-
-function Switch({ onChange, checked, size, onColor, offColor }: Props) {
+function Switch({ onChange, checked, size, onColor, offColor }) {
   return (
     <SwitchStyled
       onClick={onChange}
@@ -18,7 +10,7 @@ function Switch({ onChange, checked, size, onColor, offColor }: Props) {
     >
       {checked ? (
         <span aria-label='Dark mode' role='img'>
-          <Nightlight size={size} color={offColor} />
+          <Nightlight size={size} color={onColor} />
         </span>
       ) : (
         <span aria-label='Light mode' role='img'>
@@ -26,7 +18,7 @@ function Switch({ onChange, checked, size, onColor, offColor }: Props) {
         </span>
       )}
     </SwitchStyled>
-  );
+  )
 }
 
 const SwitchStyled = styled.button`
@@ -34,6 +26,11 @@ const SwitchStyled = styled.button`
   border: none;
   cursor: pointer;
   outline: none;
-`;
+  :hover {
+    svg {
+      color: ${props => props.theme.colors.navbar.toggleDarkModeHover};
+    }
+  }
+`
 
-export default Switch;
+export default Switch

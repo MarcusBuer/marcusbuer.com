@@ -1,39 +1,35 @@
-import React from 'react';
-import styled, { ThemeContext } from 'styled-components';
-import Switch from './Switch';
-import Container from './Container';
+import React from 'react'
+import styled, { ThemeContext } from 'styled-components'
+import Switch from './Switch'
+import Container from './Container'
 
-interface Props {
-  toggleTheme: () => void;
-}
-
-function Navbar({ toggleTheme }: Props) {
-  const Theme = React.useContext(ThemeContext);
+function Navbar({ toggleTheme }) {
+  const Theme = React.useContext(ThemeContext)
   return (
     <StyledNavbar>
       <Container id='NavBar'>
         <h1>Marcus Buer</h1>
         <div>
-          <a href='#'>About Me</a>
-          <a href='#'>Portfolio</a>
-          <a href='#'>Blog</a>
-          <a href='#'>Contact</a>
+          <a href='#about'>About Me</a>
+          <a href='#portifolio'>Portfolio</a>
+          <a href='#blog'>Blog</a>
+          <a href='#contact'>Contact</a>
         </div>
         <div>
           <Switch
             onChange={toggleTheme}
             checked={Theme.title === 'dark'}
             size={30}
-            onColor={Theme.colors.primary}
-            offColor={Theme.colors.secondary}
+            onColor={Theme.colors.navbar.toggleDarkModeActive}
+            offColor={Theme.colors.navbar.toggleDarkModeHover}
           />
-          <a id='downloadResume' href='#'>
+          <a id='downloadResume' href='#resume'>
             Resume
           </a>
         </div>
       </Container>
     </StyledNavbar>
-  );
+  )
 }
 
 const StyledNavbar = styled.nav`
@@ -76,7 +72,7 @@ const StyledNavbar = styled.nav`
   button {
     margin-right: 1rem;
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.1) rotate(360deg);
     }
   }
   #downloadResume {
@@ -91,6 +87,6 @@ const StyledNavbar = styled.nav`
       color: ${props => props.theme.colors.navbar.donwloadActive};
     }
   }
-`;
+`
 
-export default Navbar;
+export default Navbar

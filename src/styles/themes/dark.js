@@ -1,4 +1,4 @@
-export default {
+const Dark = {
   title: 'dark',
   colors: {
     primary: '#320E3B',
@@ -14,6 +14,8 @@ export default {
       download: '#F5F5F5',
       downloadHover: '#F5F5F5',
       donwloadActive: '#320E3B',
+      toggleDarkModeActive: '#f29515',
+      toggleDarkModeHover: '#ffdb16',
     },
 
     hero: {
@@ -23,3 +25,5 @@ export default {
     },
   },
 };
+
+export default Dark;

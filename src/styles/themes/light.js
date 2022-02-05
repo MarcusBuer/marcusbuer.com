@@ -1,4 +1,4 @@
-export default {
+const Light = {
   title: 'light',
   colors: {
     primary: '#320E3B',
@@ -14,6 +14,8 @@ export default {
       download: '#DF2935',
       downloadHover: '#DF2935',
       donwloadActive: '#F5F5F5',
+      toggleDarkModeActive: '#320E3B',
+      toggleDarkModeHover: '#ffdb16',
     },
 
     hero: {
@@ -22,4 +24,6 @@ export default {
       lines: '#DF2935',
     },
   },
-};
+}
+
+export default Light
