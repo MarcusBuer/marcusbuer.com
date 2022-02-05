@@ -8,6 +8,7 @@ import LightTheme from '../styles/themes/light';
 import DarkTheme from '../styles/themes/dark';
 
 import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
 
 const App = () => {
   const [theme, setTheme] = UsePersistentState<DefaultTheme>(
@@ -23,6 +24,17 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Navbar toggleTheme={toggleTheme} />
+      <Hero />
+      {/* <section id='My work'>
+        <Container>
+          <h2>About me</h2>
+        </Container>
+      </section>
+      <section id='Contact'>
+        <Container>
+          <h2>About me</h2>
+        </Container>
+      </section> */}
     </ThemeProvider>
   );
 };

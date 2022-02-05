@@ -14,11 +14,10 @@ function Navbar({ toggleTheme }: Props) {
       <Container id='NavBar'>
         <h1>Marcus Buer</h1>
         <div>
-          <a href='#'>Teste</a>
-          <a href='#'>Teste</a>
-          <a href='#'>Teste</a>
-          <a href='#'>Teste</a>
-          <a href='#'>Teste</a>
+          <a href='#'>About Me</a>
+          <a href='#'>Portfolio</a>
+          <a href='#'>Blog</a>
+          <a href='#'>Contact</a>
         </div>
         <div>
           <Switch
@@ -28,8 +27,9 @@ function Navbar({ toggleTheme }: Props) {
             onColor={Theme.colors.primary}
             offColor={Theme.colors.secondary}
           />
-          <a href=''>teste</a>
-          <a href=''>teste</a>
+          <a id='downloadResume' href='#'>
+            Resume
+          </a>
         </div>
       </Container>
     </StyledNavbar>
@@ -37,7 +37,15 @@ function Navbar({ toggleTheme }: Props) {
 }
 
 const StyledNavbar = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
+
+  * {
+    transition: all 0.25s ease;
+  }
 
   #NavBar {
     display: flex;
@@ -49,9 +57,8 @@ const StyledNavbar = styled.nav`
     cursor: default;
     user-select: none;
 
-    transition: all 0.25s ease;
     :hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
 
@@ -62,6 +69,27 @@ const StyledNavbar = styled.nav`
 
   a {
     padding: 0.5rem;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  button {
+    margin-right: 1rem;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  #downloadResume {
+    border-radius: 10px;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    border: 1px solid ${props => props.theme.colors.navbar.download};
+    color: ${props => props.theme.colors.navbar.download};
+
+    &:hover {
+      background: ${props => props.theme.colors.navbar.downloadHover};
+      color: ${props => props.theme.colors.navbar.donwloadActive};
+    }
   }
 `;
 
