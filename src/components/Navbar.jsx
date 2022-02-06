@@ -10,7 +10,7 @@ function Navbar({ toggleTheme }) {
       <Container id='NavBar'>
         <h1>Marcus Buer</h1>
         <div>
-          <a href='#About'>About Me</a>
+          <a href='#About'>About</a>
           <a href='#Portifolio'>Portfolio</a>
           <a href='#Blog'>Blog</a>
           <a href='#Contact'>Contact</a>
