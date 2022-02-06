@@ -5,9 +5,9 @@ import Container from './Container'
 function About() {
   return (
     <>
-      <StyledAbout id='about'>
+      <StyledAbout id='About'>
         <Container>
-          <h2>About</h2>
+          <h2>About me</h2>
         </Container>
       </StyledAbout>
     </>

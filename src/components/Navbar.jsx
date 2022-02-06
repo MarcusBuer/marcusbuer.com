@@ -10,10 +10,10 @@ function Navbar({ toggleTheme }) {
       <Container id='NavBar'>
         <h1>Marcus Buer</h1>
         <div>
-          <a href='#about'>About Me</a>
-          <a href='#portifolio'>Portfolio</a>
-          <a href='#blog'>Blog</a>
-          <a href='#contact'>Contact</a>
+          <a href='#About'>About Me</a>
+          <a href='#Portifolio'>Portfolio</a>
+          <a href='#Blog'>Blog</a>
+          <a href='#Contact'>Contact</a>
         </div>
         <div>
           <Switch
@@ -23,7 +23,7 @@ function Navbar({ toggleTheme }) {
             onColor={Theme.colors.navbar.toggleDarkModeActive}
             offColor={Theme.colors.navbar.toggleDarkModeHover}
           />
-          <a id='downloadResume' href='#resume'>
+          <a id='downloadResume' href='#Resume'>
             Resume
           </a>
         </div>

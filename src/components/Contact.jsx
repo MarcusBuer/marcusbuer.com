@@ -5,7 +5,7 @@ import Container from './Container'
 function Contact() {
   return (
     <>
-      <StyledContact id='contact'>
+      <StyledContact id='Contact'>
         <Container>
           <h2>Contact</h2>
         </Container>

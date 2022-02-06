@@ -5,7 +5,7 @@ import Container from './Container'
 function Blog() {
   return (
     <>
-      <StyledBlog id='blog'>
+      <StyledBlog id='Blog'>
         <Container>
           <h2>Blog</h2>
         </Container>

@@ -5,7 +5,7 @@ import Container from './Container'
 function Portfolio() {
   return (
     <>
-      <StyledPortfolio id='portfolio'>
+      <StyledPortfolio id='Portfolio'>
         <Container>
           <h2>Portfolio</h2>
         </Container>
